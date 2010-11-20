@@ -1,10 +1,26 @@
 This is a mirror of http://www.vim.org/scripts/script.php?script_id=3327
 
-PyScratch is a simple plugin that lets you use any Vim buffer as a scratchpad for running and viewing the output of Python commands.  This plugin can also be found at github:
+PyScratch is a simple plugin that lets you use any Vim buffer as a scratchpad for running and viewing the output of Python, Ruby, Perl, and Lua commands.  (Note the name 'PyScratch' is no longer accurate and will probably be changed.)  This plugin can also be found at github:
 https://github.com/hsitz/PyScratch
 
 You can watch a screencast of PyScratch at:
 http://vimeo.com/16871727
+--------------------------------------------------
+NOTE:  You can get tab completion of your Python commands by using any of the 
+available methods of completion in Vim.  I've tried the Pydiction 
+tab-completion plugin and recommend that anyone using PyScratch install Pydiction 
+( http://www.vim.org/scripts/script.php?script_id=850 ) 
+---------------------------------------------------
+NOTE2:  Also works with RUBY, PERL, and LUA.
+The name PyScratch is now misleading, since code has been modified to work
+with Ruby, Perl, and/or Lua.  The global variable g:script_language can
+be set to 'python,'ruby','perl', or 'lua', and controls which interpreter
+is used to process '>>>' commands and code blocks.  Support for any
+interpreter you use must be compiled into your Vim.  Note also that usng Perl 
+is a little different from the other languages, because Vim does not
+support Perl's 'print' or 'say' commands.  Instead 'VIM::Msg' is used
+to specify printed output.   See :help perl for more.
+-------------------------------------------------- 
 
 The PyScratch plugin consists of a single vimscript file that a Vim user can
 install by placing it in their 'plugin' directory.
